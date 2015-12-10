@@ -1,11 +1,11 @@
 # ---------------------------------------------------------------------- #
 # Script generated with: DeZign for Databases V9.0.0                     #
 # Target DBMS:           MySQL 5                                         #
-# Project file:          Project1_ora_proj.dez                       #
+# Project file:          Project1.dez                                    #
 # Project name:                                                          #
 # Author:                                                                #
 # Script type:           Database drop script                            #
-# Created on:            2015-11-23 19:40                                #
+# Created on:            2015-11-27 15:08                                #
 # ---------------------------------------------------------------------- #
 
 
@@ -13,60 +13,60 @@
 # Drop foreign key constraints                                           #
 # ---------------------------------------------------------------------- #
 
-ALTER TABLE `EMPLOYEE` DROP FOREIGN KEY `DEP_EMPLOYEE`;
+ALTER TABLE `Purchase_Detail` DROP FOREIGN KEY `Receive_Pascel_Purchase_Detail`;
 
-ALTER TABLE `EMPLOYEE` DROP FOREIGN KEY `PROJWORK_EMPLOYEE`;
+ALTER TABLE `Receive_Pascel` DROP FOREIGN KEY `Agent_Receive_Pascel`;
 
-ALTER TABLE `EMPLOYEE` DROP FOREIGN KEY `DETAIL_EMPLOYEE`;
+ALTER TABLE `Receive_Pascel` DROP FOREIGN KEY `Personnel_Receive_Pascel`;
 
-ALTER TABLE `PROJWORK` DROP FOREIGN KEY `PROJECT_PROJWORK`;
-
-# ---------------------------------------------------------------------- #
-# Drop table "EMPLOYEE"                                                  #
-# ---------------------------------------------------------------------- #
-
-# Drop constraints #
-
-ALTER TABLE `EMPLOYEE` DROP PRIMARY KEY;
-
-DROP TABLE `EMPLOYEE`;
+ALTER TABLE `Receive_Detail` DROP FOREIGN KEY `Receive_Pascel_Receive_Detail`;
 
 # ---------------------------------------------------------------------- #
-# Drop table "DETAIL"                                                    #
+# Drop table "Purchase_Detail"                                           #
 # ---------------------------------------------------------------------- #
 
 # Drop constraints #
 
-ALTER TABLE `DETAIL` DROP PRIMARY KEY;
+ALTER TABLE `Purchase_Detail` DROP PRIMARY KEY;
 
-DROP TABLE `DETAIL`;
-
-# ---------------------------------------------------------------------- #
-# Drop table "PROJWORK"                                                  #
-# ---------------------------------------------------------------------- #
-
-# Drop constraints #
-
-ALTER TABLE `PROJWORK` DROP PRIMARY KEY;
-
-DROP TABLE `PROJWORK`;
+DROP TABLE `Purchase_Detail`;
 
 # ---------------------------------------------------------------------- #
-# Drop table "PROJECT"                                                   #
+# Drop table "Receive_Detail"                                            #
 # ---------------------------------------------------------------------- #
 
 # Drop constraints #
 
-ALTER TABLE `PROJECT` DROP PRIMARY KEY;
+ALTER TABLE `Receive_Detail` DROP PRIMARY KEY;
 
-DROP TABLE `PROJECT`;
+DROP TABLE `Receive_Detail`;
 
 # ---------------------------------------------------------------------- #
-# Drop table "DEP"                                                       #
+# Drop table "Receive_Pascel"                                            #
 # ---------------------------------------------------------------------- #
 
 # Drop constraints #
 
-ALTER TABLE `DEP` DROP PRIMARY KEY;
+ALTER TABLE `Receive_Pascel` DROP PRIMARY KEY;
 
-DROP TABLE `DEP`;
+DROP TABLE `Receive_Pascel`;
+
+# ---------------------------------------------------------------------- #
+# Drop table "Personnel"                                                 #
+# ---------------------------------------------------------------------- #
+
+# Drop constraints #
+
+ALTER TABLE `Personnel` DROP PRIMARY KEY;
+
+DROP TABLE `Personnel`;
+
+# ---------------------------------------------------------------------- #
+# Drop table "Agent"                                                     #
+# ---------------------------------------------------------------------- #
+
+# Drop constraints #
+
+ALTER TABLE `Agent` DROP PRIMARY KEY;
+
+DROP TABLE `Agent`;
